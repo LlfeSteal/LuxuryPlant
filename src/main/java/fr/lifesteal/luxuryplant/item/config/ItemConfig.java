@@ -8,10 +8,21 @@ import net.minecraft.item.ItemGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class ItemConfig {
-    public static final List<IRegistryObject<Item>> PLUGIN_ITEMS = new ArrayList<>();
+public class ItemConfig {
+    public final List<IRegistryObject<Item>> PLUGIN_ITEMS = new ArrayList<>();
 
-    static {
-        PLUGIN_ITEMS.add(new ItemBase("strawberry", new Item.Properties().tab(ItemGroup.TAB_FOOD)));
+    private final ItemGroupConfig itemGroupConfig;
+
+
+    public ItemConfig(ItemGroupConfig itemGroupConfig) {
+        this.itemGroupConfig = itemGroupConfig;
     }
+
+    public List<IRegistryObject<Item>> getPluginItems() {
+        return new ArrayList<IRegistryObject<Item>>()
+        {{
+            add(new ItemBase("strawberry", new Item.Properties().tab(itemGroupConfig.getPluginItemGroup())));
+        }};
+    }
+
 }

@@ -1,6 +1,7 @@
 package fr.lifesteal.luxuryplant;
 
 import fr.lifesteal.luxuryplant.item.config.ItemConfig;
+import fr.lifesteal.luxuryplant.item.config.ItemGroupConfig;
 import fr.lifesteal.luxuryplant.registry.GenericRegistry;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
@@ -32,7 +33,10 @@ public class LuxuryPlant
     }
 
     private void setupRegistries() {
-        this.itemRegistry.registerObjects(ItemConfig.PLUGIN_ITEMS);
+        ItemGroupConfig itemGroupConfig = new ItemGroupConfig(this.itemRegistry);
+        ItemConfig itemConfig = new ItemConfig(itemGroupConfig);
+
+        this.itemRegistry.registerObjects(itemConfig.getPluginItems());
         this.itemRegistry.init(MOD_EVENT_BUS);
     }
 
