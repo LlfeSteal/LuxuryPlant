@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "lfl",
+    "sos",
+    "bbb"
+  ],
+  "key":
+  {
+    "l":
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    "f":
+    {
+      "item": "luxuryplant:strawberry"
+    },
+    "s":
+    {
+      "item": "minecraft:sugar"
+    },
+    "o":
+    {
+      "item": "minecraft:egg"
+    },
+    "b":
+    {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result":
+  {
+    "item": "luxuryplant:strawberry_cake",
+    "count": 1
+  }
+}
