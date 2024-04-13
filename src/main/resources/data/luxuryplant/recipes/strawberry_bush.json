@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat_seeds"
+    },
+    {
+      "item": "minecraft:red_dye"
+    }
+  ],
+  "result":
+  {
+    "item": "luxuryplant:strawberry_bush",
+    "count": 1
+  }
+}
