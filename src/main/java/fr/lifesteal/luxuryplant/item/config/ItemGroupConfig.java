@@ -8,13 +8,12 @@ import net.minecraft.item.ItemStack;
 
 public class ItemGroupConfig {
 
-    private final GenericRegistry<Item> itemGenericRegistry;
-
+    private final GenericItemGroup pluginItemGroup;
     public ItemGroupConfig(GenericRegistry<Item> itemGenericRegistry) {
-        this.itemGenericRegistry = itemGenericRegistry;
+        pluginItemGroup = new GenericItemGroup("LuxuryPlant", () -> new ItemStack(itemGenericRegistry.getRegisterItemByName("strawberry").get()));
     }
 
     public ItemGroup getPluginItemGroup() {
-        return new GenericItemGroup("LuxuryPlant", () -> new ItemStack(itemGenericRegistry.getRegisterItemByName("strawberry").get()));
+        return pluginItemGroup;
     }
 }

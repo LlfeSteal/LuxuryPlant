@@ -1,16 +1,13 @@
 package fr.lifesteal.luxuryplant.item.config;
 
-import fr.lifesteal.luxuryplant.item.IRegistryObject;
+import fr.lifesteal.luxuryplant.api.registry.IRegistryObject;
 import fr.lifesteal.luxuryplant.item.ItemBase;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ItemConfig {
-    public final List<IRegistryObject<Item>> PLUGIN_ITEMS = new ArrayList<>();
-
     private final ItemGroupConfig itemGroupConfig;
 
 

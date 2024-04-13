@@ -1,5 +1,6 @@
 package fr.lifesteal.luxuryplant.item;
 
+import fr.lifesteal.luxuryplant.api.registry.IRegistryObject;
 import net.minecraft.item.Item;
 
 import java.util.function.Supplier;
@@ -16,7 +17,7 @@ public class ItemBase extends Item implements IRegistryObject<Item> {
     }
 
     @Override
-    public String getName() {
+    public String getRegistryObjectName() {
         return this.name;
     }
 

@@ -1,4 +1,7 @@
 {
   "item.luxuryplant.strawberry": "Strawberry",
+
+  "block.luxuryplant.strawberry_bush": "Strawberry Bush",
+
   "itemGroup.LuxuryPlant": "LuxuryPlant"
 }
