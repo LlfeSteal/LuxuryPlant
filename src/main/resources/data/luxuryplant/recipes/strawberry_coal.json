@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "luxuryplant:strawberry"
+  },
+  "result": "minecraft:coal",
+  "experience": 1.0,
+  "cookingtime": 200
+}
