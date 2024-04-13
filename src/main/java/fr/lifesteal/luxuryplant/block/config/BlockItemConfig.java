@@ -22,6 +22,7 @@ public class BlockItemConfig {
     public List<IRegistryObject<Item>> getPluginBlockItems() {
         return new ArrayList<IRegistryObject<Item>>() {{
             add(new BlockItemBase("strawberry_bush", new Item.Properties().tab(itemGroupConfig.getPluginItemGroup()), () -> blockRegistry.getRegisterItemByName("strawberry_bush").get()));
+            add(new BlockItemBase("strawberry_cake", new Item.Properties().tab(itemGroupConfig.getPluginItemGroup()), () -> blockRegistry.getRegisterItemByName("strawberry_cake").get()));
         }};
     }
 }

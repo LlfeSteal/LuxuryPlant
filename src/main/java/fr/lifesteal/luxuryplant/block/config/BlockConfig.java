@@ -2,11 +2,13 @@ package fr.lifesteal.luxuryplant.block.config;
 
 import fr.lifesteal.luxuryplant.api.registry.IRegistryObject;
 import fr.lifesteal.luxuryplant.block.BushBlockBase;
+import fr.lifesteal.luxuryplant.block.CakeBlockBase;
 import fr.lifesteal.luxuryplant.registry.GenericRegistry;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.ToolType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +33,9 @@ public class BlockConfig {
                             .noCollission()
                             .noOcclusion()
                             .dynamicShape()
+                            .harvestTool(ToolType.SHOVEL)
                             .instabreak(), () -> itemRegistry.getRegisterItemByName("strawberry").get()));
+            add(new CakeBlockBase("strawberry_cake", AbstractBlock.Properties.of(Material.CAKE)));
         }};
     }
 }
